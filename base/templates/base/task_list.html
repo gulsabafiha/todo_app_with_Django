@@ -1,0 +1,16 @@
+<h2>My To DO List</h2>
+
+<table>
+<tr>
+<th>Item</th>
+</tr>
+{% for task in tasks %} 
+<tr>
+<td>{{task.title}}</td>
+<td><a href="{% url 'taskdetail' task.pk %}">view</a></td>
+</tr>
+{% empty %}
+<h3>No items in list</h3>
+
+{% endfor %}
+</table>
