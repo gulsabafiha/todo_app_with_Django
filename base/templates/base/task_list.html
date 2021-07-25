@@ -1,36 +1,32 @@
 {% extends 'base/main.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="header-bar">
-<div>
-<h1>Hello {{request.user|title}}</h1>
-<h3 style="margin:0">You have <i>{{count}}</i> incomplete task{{count|pluralize:"s"}}</h3>
-</div>
-{% if request.user.is_authenticated %}
+    <div>
+        <h1>Hello {{request.user|title}}</h1>
+        <h3 style="margin:0">You have <i>{{count}}</i> incomplete task{{count|pluralize:"s"}}</h3>
+    </div>
+    {% if request.user.is_authenticated %}
 
-<a href="{% url 'logout' %}">Logout</a>
-{% else %}
-<a href="{% url 'login' %}">Login</a>
-{% endif %}
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
 </div>
 
 
 <div id="search-add-wrapper">
-<form action="" method='GET' style="margin-top:20px; display:flex;">
-<input type="text" name="search-area" value={{search_input}}>
-<input class="button" type="submit" value="Search">
-</form> 
-<a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
+    <form action="" method='GET' style="margin-top:20px; display:flex;">
+        <input type="text" name="search-area" value={{search_input}}>
+        <input class="button" type="submit" value="Search">
+    </form> 
+    <a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
 </div>
-
- 
-
-
 
 
 <div class="task-items-wrapper">
-{% for task in task %} 
+    {% for task in task %} 
 
     <div class="task-wrapper">
     {% if task.complete %}
