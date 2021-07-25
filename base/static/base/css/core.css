@@ -10,10 +10,10 @@ body {
   filter: blur(150px);
 }
 .color:nth-child(1) {
-  top: -290px;
+  top: -300px;
   width: 600px;
   height: 600px;
-  background: #ff359acb;
+  background: #ff359a;
 }
 .color:nth-child(2) {
   bottom: -150px;
@@ -39,7 +39,7 @@ h6 {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 a,
@@ -55,7 +55,7 @@ p {
   backdrop-filter: blur(20px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.274);
   border: 1px solid rgba(255, 255, 255, 0.582);
-  border-right: 1px solid rgba(255, 255, 255, 0.363);
+  border-right: 1px solid rgba(255, 255, 255, 0.589);
   border-bottom: 1px solid rgba(255, 255, 255, 0.329);
   border-top: 1px solid rgba(255, 255, 255, 0.329);
 }
@@ -66,7 +66,7 @@ p {
   display: flex;
   justify-content: space-between;
   color: rgb(27, 10, 10);
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px 5px 0 0;
   background: linear-gradient(rgba(121, 47, 131, 0.432), #00d0ff9c);
 }
@@ -74,6 +74,7 @@ p {
   color: rgb(27, 10, 10);
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
 }
 .task-wrapper {
   display: flex;
@@ -138,7 +139,7 @@ p {
 .handle:active,
 .handle:active:before,
 .handle:active:after {
-  cursor: grabbing;
+  cursor: cursor;
 }
 
 .dropArea {
@@ -181,7 +182,7 @@ textarea {
 }
 
 label {
-  padding-top: 10px !important;
+  padding-top: 5px !important;
   display: block;
 }
 
@@ -195,7 +196,7 @@ label {
   border: 1px solid #757575;
   background-color: #fff;
   color: rgb(27, 10, 10);
-  padding: 10px;
+  padding: 8px 10px;
   font-size: 14px;
   border-radius: 5px;
   cursor: pointer;
@@ -203,5 +204,5 @@ label {
 }
 
 .card-body {
-  padding: 20px;
+  padding: 15px;
 }
